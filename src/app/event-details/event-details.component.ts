@@ -15,18 +15,18 @@ export class EventDetailsComponent implements OnInit {
   @Output() subscribedTo = new EventEmitter<FormEventModel>();
 
   eventModel: FormEventModel;
-  sharedService: ShareDataService;
-  // constructor(private sharedService: ShareDataService) { }
-  constructor() { 
-    this.sharedService = new ShareDataService();
-  }
+  
+  constructor(private sharedService: ShareDataService) { }
 
   ngOnInit() {}
 
+  //this method will be called using Output decorator
   subscribeTo(_event: FormEventModel){
     console.log(_event);
     this.subscribedTo.emit(_event);
   }
+
+  //this method for the logic using services and Observer will be called
   setSubscribedData(data: FormEventModel){
     console.log(data)
     this.sharedService.setCurrentData(data);

@@ -4,7 +4,7 @@ import { BehaviorSubject} from 'rxjs';
 @Injectable()
 export class ShareDataService {
 
-private sharedDataSource : BehaviorSubject<any> = new BehaviorSubject(null);
+private sharedDataSource : BehaviorSubject<any> = new BehaviorSubject({});
 public  customData = this.sharedDataSource.asObservable();
 
  constructor() {}
