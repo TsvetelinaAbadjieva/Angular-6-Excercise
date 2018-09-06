@@ -1,0 +1,11 @@
+  <h1>Users List</h1>
+  <div class="container">
+    <ul *ngFor="let user of _users">
+      <li><a routerLink="/details/{{user.id}}">{{user.name}}</a></li>
+      <ul>
+        <li>{{user.website}}</li>
+        <li><a href="http://{{ user.website }}">{{user.website}}</a></li>
+      </ul>
+      
+    </ul>
+  </div>

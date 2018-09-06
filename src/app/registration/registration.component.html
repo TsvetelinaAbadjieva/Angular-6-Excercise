@@ -1,0 +1,83 @@
+<!-- Material form login -->
+<div class="card">
+
+    <h2 class="card-header info-color white-text text-center py-4">
+      <strong>Registration</strong>
+    </h2>
+  
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+  
+      <!-- Form -->
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"  class="text-center" style="color: #757575;">
+        <!-- Name -->
+        <div class="md-form form-group">
+            <label for="materialLoginFormName">Name</label>
+            <input type="text" formControlName="name" [(ngModel)]="name" id="materialLoginFormName" [ngClass]="{'is-invalid': submitted && f.name.errors}" class="form-control">
+            {{name}}
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">Name is required</div>
+                <div *ngIf="f.name.errors.minlength">Name is not less than 3 symbols</div>
+                <div *ngIf="f.name.errors.validatorName">Name INVALID</div>
+
+            </div>
+        </div>
+        <!-- Name -->
+        <div class="md-form form-group">
+            <label for="materialLoginFormUsername">Userame</label>
+            <input type="text" formControlName="username" id="materialLoginFormUsername" [ngClass]="{'is-invalid': submitted && f.name.errors}" class="form-control">
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+                <div *ngIf="f.username.errors.minlength">Username is not less than 3 symbols</div>
+            </div>
+        </div>
+          <!-- Email -->
+        <div class="md-form form-group">
+            <label for="materialLoginFormEmail">E-mail</label>
+            <input type="email" formControlName="email"  id="materialLoginFormEmail" [ngClass]="{'is-invalid': submitted && f.email.errors}" class="form-control">
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Enter a valid email</div>
+            </div>
+        </div>
+  
+        <!-- Password -->
+        <div class="md-form form-group">
+          <label for="materialLoginFormPassword">Password</label>
+          <input type="password" formControlName="password" id="materialLoginFormPassword" [ngClass]="{'is-invalid': submitted && f.password.errors}" class="form-control">
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+              <div *ngIf="f.password.errors.minlength">Enter longer password</div>
+              <div *ngIf="f.password.errors.maxlength">Enter password up to 15 symbols</div>
+            </div>
+      </div>
+  
+        <div class="d-flex justify-content-around">
+        </div>
+  
+        <!-- Sign in button -->
+        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign up</button>
+  
+  
+        <!-- Social login -->
+        <p>or sign in with:</p>
+        <a type="button" class="btn-floating btn-fb btn-sm">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a type="button" class="btn-floating btn-tw btn-sm">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a type="button" class="btn-floating btn-li btn-sm">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a type="button" class="btn-floating btn-git btn-sm">
+          <i class="fa fa-github"></i>
+        </a>
+  
+      </form>
+      <!-- Form -->
+  
+    </div>
+  
+  </div>
+  <!-- Material form login -->

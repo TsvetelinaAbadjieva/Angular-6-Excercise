@@ -1,0 +1,22 @@
+nav {
+    background: #2D2E2E;
+    height: 100%;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        li {
+            a {
+                color: #fff;
+                padding: 20px;
+                display: block;
+            }
+            list-style-type: none;
+            .activated {
+                background-color: #00a8ff;
+            }
+        }
+    }
+    
+}

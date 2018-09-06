@@ -1,0 +1,43 @@
+  <h2>Create new Event</h2>
+<!-- set Title -->
+<div>
+  <label for="title">Title</label>
+  <input type="text" name="title" placeholder="title">
+</div>
+<!-- set startDate endDate-->
+<div>
+  <label for="startDate">Start date</label>
+  <input type="date" name="startDate" placeholder="startDate">
+
+  <label for="startDate">Start time</label>
+  <input type="text" name="startTime" placeholder="startTime">
+</div>
+<div>
+  <label for="endDate">End date</label>
+  <input type="date" name="endDate" placeholder="endDate">
+
+  <label for="endTime">End time</label>
+  <input type="text" name="endTime" placeholder="endTime">
+</div>
+
+<!-- set Teaser -->
+<div>
+  <label for="teaser">Teaser</label>
+  <textarea name="teaser" id="" cols="30" rows="10" placeholder="teaser text"></textarea>
+</div>
+
+<!-- set Body -->
+<div>
+  <label for="body">Body</label>
+  <textarea name="body" id="" cols="30" rows="10" placeholder="body text"></textarea>
+</div>
+
+<!-- set Organizators -->
+<div>
+    <label for="title">Organizators</label>
+    <input type="text" name="organizator" placeholder="organizator">
+    <button (onClick)="addNewOrganizator($event)"><i class="material-icons">playlist_add</i></button>
+    {{organizator}}
+</div>
+<div><a href="/events">Events List</a></div>
+  

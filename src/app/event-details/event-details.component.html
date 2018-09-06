@@ -1,0 +1,13 @@
+<div class="container">
+  <div>{{index}}</div>  
+  <div>{{event.title}}</div>  
+  <div>{{event.startDate}} {{event.startTime}}</div>
+  <div>{{event.endDate}} {{event.endTime}}</div>
+  <div>{{event.body}}</div>
+  <ul *ngFor="let participant of event.participants">
+    <li>{{participant}}</li>
+  </ul>
+  <div><button (click)="subscribeTo(event)">Subscribe to</button></div>
+  <div><button (click)="setSubscribedData(event)">Subscribe to As Service</button></div>
+
+</div>

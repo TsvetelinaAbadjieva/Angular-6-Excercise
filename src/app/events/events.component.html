@@ -1,0 +1,10 @@
+<h1>Recent events</h1>
+  <div class="container">
+    <p *ngFor="let _event of subscribedEvents">Successfully subscribed to {{subscribedEvents.title}}
+        <span>{{_event.title}}</span>
+    </p>    
+    <ul *ngFor="let event of events; let i=index">
+        <li><app-event-details [event]="event" [index]="i" (subscribedTo)="getSubscribedEvents($event)"></app-event-details></li>      
+    </ul>
+    <app-subscribed-events></app-subscribed-events>      
+  </div>
